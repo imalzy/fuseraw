@@ -1,0 +1,68 @@
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  td, th {
+    width: 25%;
+  }
+
+  .highlight{
+    background: #DCDCDC;/* green */
+  }
+
+  .mat-card {
+    padding: 18px !important; // less padding than per default
+}
+
+.mat-card-image {
+    width: calc(100% + 36px) !important; // update padding
+    margin: 0 -24px 16px -18px !important; // update padding
+}
+
+.mat-tab-label {
+    font-size: 16px !important;
+}
+
+.mat-card-title {
+    font-size:14px !important;
+    font-weight: 500 !important;
+}
+
+.mat-card-content {
+    font-size: 14px !important;
+    min-height: 30px; // <--- to remove !!!
+}
+
+.product {
+    margin-bottom: 25px;
+    /*min-width: 180px;
+    text-align: center;*/
+    height: 250px;
+} 
+
+.mat-card-actions{
+  float: right;
+  padding-top: 5px;
+}
+/* desktop button */
+.mat-card-add-button {
+    border: 1px dashed grey;
+    box-shadow:none !important;
+    cursor:pointer;
+}
+
+.product img {
+    width: 100%;
+    min-height: 150px;
+    object-fit: contain;
+}
+
+.transparent .mat-dialog-container {
+  box-shadow: none;
+  background: rgba(0, 0, 0, 0.0);
+}

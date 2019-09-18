@@ -1,0 +1,53 @@
+<div class="page-layout blank p-24" fusePerfectScrollbar>
+
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+          <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+              {{ option }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </form>
+
+      <mat-toolbar>
+        <mat-toolbar-row>
+          <span class="example-space"></span>
+          <button mat-raised-button color="primary" (click)="openDialog()">Tambah</button>
+        </mat-toolbar-row>
+      </mat-toolbar>
+     
+      <div class="example-container mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource">
+      
+          <!-- Position Column -->
+          <ng-container matColumnDef="Id Produk">
+            <th mat-header-cell *matHeaderCellDef> ID Produk </th>
+            <td mat-cell *matCellDef="let element"> {{element.idProduk}} </td>
+          </ng-container>
+      
+          <!-- Name Column-->
+          <ng-container matColumnDef="Nama Produk">
+            <th mat-header-cell *matHeaderCellDef> Nama Produk </th>
+            <td mat-cell *matCellDef="let element"> {{element.nmProduk}} </td>
+          </ng-container>
+      
+          <!-- Weight Column -->
+          <ng-container matColumnDef="Merk Produk">
+            <th mat-header-cell *matHeaderCellDef> Merk Produk </th>
+            <td mat-cell *matCellDef="let element"> {{element.merkProduk}} </td>
+          </ng-container>
+          
+
+          <ng-container matColumnDef="Harga Produk">
+            <th mat-header-cell *matHeaderCellDef> Harga Produk </th>
+            <td mat-cell *matCellDef="let element"> {{element.hrgProduk}} </td>
+          </ng-container>
+          
+          <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </div>
+
+</div>

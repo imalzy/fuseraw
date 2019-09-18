@@ -1,0 +1,17 @@
+.example-container {
+    height: 400px;
+    overflow: auto;
+}
+
+table {
+    width: 100%;
+}
+
+.example-space {
+    flex: 1 0 auto;
+}
+
+.mat-button,
+.mat-raised-button {
+    background-color: #303F9F;
+}
